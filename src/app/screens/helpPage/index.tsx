@@ -1,6 +1,6 @@
 import { Container } from "@mui/material";
 import React from "react";
 
-export function About() {
-  return <Container>About</Container>;
+export function HelpPage() {
+  return <Container>HelpPage</Container>;
 }
