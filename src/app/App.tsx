@@ -4,7 +4,7 @@ import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { Link, Route, Switch } from "react-router-dom";
 import { HomePage } from "./screens/homePage";
 import { ProductsPage } from "./screens/productsPage";
-import { OrdersPage } from "./screens/orderspage";
+import { OrdersPage } from "./screens/ordersPage";
 import { UserPage } from "./screens/userpage";
 
 function App() {
