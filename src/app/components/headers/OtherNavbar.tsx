@@ -1,5 +1,64 @@
+import { Box, Button, Container, Stack } from "@mui/material";
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export function OtherNavbar() {
-  return <div>OtherNavbar</div>;
+  const authMember = null;
+  return (
+    <div className="other-navbar">
+      <Container classaName="navbar-container">
+        <Stack className="menu">
+          <Box>
+            <NavLink to={"/"}>
+              <img className="brand-logo" src="./icons/burak.svg" />
+            </NavLink>
+          </Box>
+          <Stack className="links">
+            <Box className={"hover-line"}>
+              <NavLink to="/">HOME</NavLink>
+            </Box>
+            <Box className={"hover-line"}>
+              <NavLink to="/products" activeClassName={"underline"}>
+                Products
+              </NavLink>
+            </Box>
+            {authMember ? (
+              <Box className={"hover-line"}>
+                <NavLink to="/orders" activeClassName={"underline"}>
+                  Orders
+                </NavLink>
+              </Box>
+            ) : null}
+            {authMember ? (
+              <Box className={"hover-line"}>
+                <NavLink to="/member-page" activeClassName={"underline"}>
+                  My Page
+                </NavLink>
+              </Box>
+            ) : null}
+            <Box className={"hover-line"}>
+              <NavLink to="/help" activeClassName={"underline"}>
+                Help
+              </NavLink>
+            </Box>
+            {/* BASKET */}
+
+            {!authMember ? (
+              <Box>
+                <Button variant="contained" className="login-button">
+                  Login
+                </Button>
+              </Box>
+            ) : (
+              <img
+                className="user-avatar"
+                src={"/icons/default-user.svg"}
+                aria-haspopup={"true"}
+              />
+            )}
+          </Stack>
+        </Stack>
+      </Container>
+    </div>
+  );
 }
