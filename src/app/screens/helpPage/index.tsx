@@ -1,6 +1,6 @@
 import { Container } from "@mui/material";
 import React from "react";
 
-export function HelpPage() {
+export default function HelpPage() {
   return <Container>HelpPage</Container>;
 }
