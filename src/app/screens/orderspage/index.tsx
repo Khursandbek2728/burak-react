@@ -1,28 +1,28 @@
-import { useState, SyntheticEvent } from 'react';
-import { Container, Stack, Box } from '@mui/material';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import TabContext from '@mui/lab/TabContext';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import PausedOrders from './PausedOrders';
-import ProcessOrders from './ProcessedOrders';
-import FinishedOrders from './FinishedOrders';
-import '../../../css/order.css';
+import { useState, SyntheticEvent } from "react";
+import { Container, Stack, Box } from "@mui/material";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import TabContext from "@mui/lab/TabContext";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import PausedOrders from "./PausedOrders";
+import ProcessOrders from "./ProcessedOrders";
+import FinishedOrders from "./FinishedOrders";
+import "../../../css/order.css";
 
 export default function OrdersPage() {
-  const [value, setValue] = useState('1');
+  const [value, setValue] = useState("1");
 
   const handleChange = (e: SyntheticEvent, newValue: string) => {
     setValue(newValue);
   };
-  
+
   return (
     <div className="order-page">
       <Container className="order-container">
         <Stack className="order-left">
           <TabContext value={value}>
             <Box className="order-nav-frame">
-              <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+              <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
                 <Tabs
                   value={value}
                   onChange={handleChange}
@@ -35,7 +35,7 @@ export default function OrdersPage() {
                 </Tabs>
               </Box>
             </Box>
-            
+
             <Stack className="order-main-content">
               <PausedOrders />
               <ProcessOrders />
@@ -59,7 +59,7 @@ export default function OrdersPage() {
                   />
                 </div>
               </div>
-              <span className={"order-user-name"}>Alex</span>
+              <span className={"order-user-name"}>Adam</span>
               <span className={"order-user-prof"}>User</span>
             </Box>
             <Box className={"liner"}></Box>
@@ -111,11 +111,7 @@ export default function OrdersPage() {
             </div>
           </Box>
         </Stack>
-
-
       </Container>
     </div>
   );
-  
-
 }
