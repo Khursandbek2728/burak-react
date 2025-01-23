@@ -67,7 +67,7 @@ export default function OrdersPage() {
               <div style={{ display: "flex" }}>
                 <LocationOnIcon />
               </div>
-              <div className={"spec-address-txt"}>Hongdae, South Korea</div>
+              <div className={"spec-address-txt"}>Daejon, South Korea</div>
             </Box>
           </Box>
           <Box className={"order-info-box"} sx={{ mt: "15px" }}>
