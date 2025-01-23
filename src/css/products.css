@@ -189,8 +189,6 @@ input:focus {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 20px;
 }
 
 .products-page .product-wrapper .no-data {
@@ -209,8 +207,8 @@ input:focus {
 
 .products-page .products .product-card {
     margin-top: 40px;
-    width: calc(25% - 35px);
-    min-width: 220px;
+    margin-right: 24px;
+    width: 270px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -219,10 +217,9 @@ input:focus {
 
 .products-page .products .product-card .product-img {
     position: relative;
-    width: 100%;
-    height: 220px;
+    width: 273px;
+    height: 275px;
     background-size: cover;
-    background-position: center;
     border-radius: 0px 50px 0px 0px;
 }
 
@@ -274,42 +271,43 @@ input:focus {
 .products-page .products .shop-btn {
     position: absolute;
     padding: 20px;
-    bottom: 15px;
-    left: 15px;
-    width: 45px;
-    height: 45px;
+    top: 217px;
+    width: 64px;
+    height: 46px;
+    left: 105px;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
     cursor: pointer;
     z-index: 3;
     opacity: 0;
     transition: opacity 0.5s ease;
-    background: rgba(198, 0, 255, 0.66);
+    background: rgb(198 0 255 / 66%);
     border: 2px solid #d7b686;
-    border-radius: 50%;
+    border-radius: 10px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 10px;
     line-height: 15px;
     color: #f8f8ff;
+
 }
 
 .products-page .products .view-btn {
     position: absolute;
     bottom: 15px;
-    right: 15px;
     padding: 5px;
-    width: 45px;
-    height: 45px;
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
     cursor: pointer;
     z-index: 5;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opcity 0.5s ease;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 50%;
 }
@@ -332,11 +330,6 @@ input:focus {
     opacity: 1;
 }
 
-.products-page .products .shop-btn:hover,
-.products-page .products .view-btn:hover {
-    transform: scale(1.1);
-    transition: all 0.3s ease;
-}
 
 .products-page .products .address {
     width: 100%;
@@ -383,7 +376,7 @@ input:focus {
     background: rgb(13, 21, 24);
 }
 
-.products-page .products .brands-logo .restaurant-logo {
+.products-page .products .brands-logo .family-brands {
     width: 100%;
     height: auto;
     display: flex;
@@ -391,10 +384,10 @@ input:focus {
     align-items: center;
 }
 
-.products-page .products .brands-logo .family-brands {
+.products-page .products .brands-logo .family-brands .category-title {
     width: 305px;
     height: 46px;
-    margin-top: 70px;
+    margin-top: 10px;
     font-family: 'Roboto';
     font-size: 36px;
     font-weight: 700;
@@ -404,7 +397,7 @@ input:focus {
     color: rgb(227, 192, 141);
 }
 
-.products-page .products .brands-logo .restaurant-img {
+.products-page .products .brands-logo  .brand-list {
     width: auto;
     height: auto;
     display: flex;
@@ -413,7 +406,7 @@ input:focus {
     justify-content: center;
 }
 
-.products-page .products .brands-logo .card {
+.products-page .products .brands-logo img {
     width: 259px;
     height: 350px;
     margin: 50px 0px 0px 50px;
@@ -427,7 +420,7 @@ input:focus {
     background: rgb(13, 21, 24);
 }
 
-.products-page .products .brands-logo .card img {
+.products-page .products .brands-logo  img {
     width: 238px;
     height: 329px;
     background-size: contain;
