@@ -1,25 +1,24 @@
-import React from 'react';
-import { Route, Switch, useLocation } from 'react-router-dom';
-import  ProductsPage  from './screens/productsPage';
-import  OrdersPage  from './screens/ordersPage';
-import  UserPage  from './screens/userPage';
-import  HomePage  from './screens/homePage';
-import  HelpPage  from './screens/helpPage';
-import  OtherNavbar  from './components/headers/OtherNavbar';
-import  HomeNavbar  from './components/headers/HomeNavbar';
-import Footer  from './components/footers';
-import '../css/app.css';
-import '../css/navbar.css'
-import '../css/footer.css'
-
+import React from "react";
+import { Route, Switch, useLocation } from "react-router-dom";
+import ProductsPage from "./screens/productsPage";
+import OrdersPage from "./screens/ordersPage";
+import UserPage from "./screens/userPage";
+import HomePage from "./screens/homePage";
+import HelpPage from "./screens/helpPage";
+import OtherNavbar from "./components/headers/OtherNavbar";
+import HomeNavbar from "./components/headers/HomeNavbar";
+import Footer from "./components/footers";
+import "../css/app.css";
+import "../css/navbar.css";
+import "../css/footer.css";
+import Test from "./screens/Test";
 
 function App() {
-    const location = useLocation();
+  const location = useLocation();
 
-    return (
-      <>
-
-      {location.pathname === "/" ? <HomeNavbar/> : <OtherNavbar/>}
+  return (
+    <>
+      {location.pathname === "/" ? <HomeNavbar /> : <OtherNavbar />}
       <Switch>
         <Route path="/products">
           <ProductsPage />
@@ -28,21 +27,19 @@ function App() {
           <OrdersPage />
         </Route>
         <Route path="/member-page">
-          <UserPage/>
+          <UserPage />
         </Route>
         <Route path="/help">
-          <HelpPage/>
+          <HelpPage />
         </Route>
         <Route path="/">
-          <HomePage />
+          <Test />
+          {/* <HomePage /> */}
         </Route>
       </Switch>
-      <Footer/>
+      <Footer />
     </>
-    
-    );
-    
-
+  );
 }
 
 export default App;
