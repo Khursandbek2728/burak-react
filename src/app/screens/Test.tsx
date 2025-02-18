@@ -1,9 +1,10 @@
 // @ts-nocheck
-import { Component } from "react";
+import React, { Component } from "react";
 
 class Test extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       brand: "Ford",
       model: "Mustang",
@@ -12,7 +13,7 @@ class Test extends Component {
     };
   }
 
-  changedetail = () => {
+  changeDetail = () => {
     this.setState({
       color: "blue",
       brand: "Tesla",
@@ -38,10 +39,10 @@ class Test extends Component {
       <div>
         <h1>My {this.state.brand}</h1>
         <p>
-          Color:{this.state.color} - Model{this.state.model}
-          from {this.state.year}.
+          Color: {this.state.color} Model: {this.state.model} from{" "}
+          {this.state.year}.
         </p>
-        <button type="button" onClick={this.changedetail}>
+        <button type="button" onClick={this.changeDetail}>
           Change Detail
         </button>
       </div>

@@ -1,23 +1,34 @@
+import OrdersPage from "../../app/screens/ordersPage";
+import { OrderStatus } from "../enums/order-enum";
 import { Member } from "./member";
+import { Order } from "./order";
 import { Product } from "./product";
 
-/** REACT APP STATE */
+/** REACT APP STATE **/
 export interface AppRootState {
-  productsPage: any;
-  homePage: HomePageState;
+    homePage: HomePageState;
+    productsPage: ProductsPageState;
+    ordersPage: OrdersPageState;
 }
 
-/** HOMEPAGE */
+/** HOMEPAGE **/
 export interface HomePageState {
-  popularDishes: Product[];
-  newDishes: Product[];
-  topUsers: Member[];
+    popularDishes: Product[];
+    newDishes: Product[];
+    topUsers: Member[];
+}
+/** PRODUCTS PAGE **/
+export interface ProductsPageState {
+    restaurant: Member | null;
+    chosenProduct: Product | null;
+    products: Product [];
 }
 
-/** PRODUCTS PAGE */
-export interface ProductsPageState {
-  restaurant: Member | null;
-chosenProduct: Product | null;
-  products: Product[];
+
+
+/** ORDERS PAGE **/
+export interface OrdersPageState {
+    pausedOrders: Order[];
+    processOrders: Order[];
+    finishedOrders: Order[]
 }
-/** ORDERS PAGE */

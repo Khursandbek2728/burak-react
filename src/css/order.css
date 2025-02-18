@@ -152,12 +152,12 @@
 	color: #434141;
 }
 
-.order-page .order-info-box .cards-box {
+.cards-box {
 	margin-top: 35px;
 	width: 80%;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .order-page .order-info-box .css-wca78v-MuiButtonBase-root-MuiButton-root {
